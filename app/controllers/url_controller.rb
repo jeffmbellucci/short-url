@@ -10,7 +10,7 @@ end
 
   def create
     @new_url = Url.create(url_params)
-    @new_url.short_url = "cur.ve/" + SecureRandom.urlsafe_base64(9)
+    @new_url.short_url = "cur.ve/" + SecureRandom.urlsafe_base64(6)
 
     if @new_url.save
       redirect_to @new_url
