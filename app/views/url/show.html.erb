@@ -1,0 +1,5 @@
+<h3> Original url <h3>
+  <h5><a href=<%= @url.long_url %>><%= @url.long_url %></a><h5>
+<h3> Shortened url <h3>
+  <h5><a href=<%= @url.long_url %>><%= @url.short_url %></a><h5>
+<h3><%= link_to "Create new short URL", url_new_path %> | <%= link_to "HOME", root_path %><h3>

@@ -1,0 +1,7 @@
+<h4> Please Type a URL Below<h4>
+
+  <%= form_with model: @new_url do |form| %>
+  <%= form.label :URL_field %><br>
+  <%= form.text_field :long_url %> <br>
+  <%= form.submit "Shorten this" %>
+  <% end %>

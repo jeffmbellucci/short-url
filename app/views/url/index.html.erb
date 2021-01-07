@@ -1,0 +1,21 @@
+<%= image_tag("curve_health.svg", width: "150") %>
+
+<h3>Greetings, Ram and Whu</h3>
+
+<h2><%= link_to "Create New Short URL", new_url_path %><h2>
+<br>
+
+<h2>Existing Shortened URLS:</h2>
+
+<ul>
+  <% @urls.each do |url| %>
+    <li>
+      <h3> Original url: <a href=<%= url.long_url %>><%= url.long_url %></a><h3>
+    </li>
+    <li>
+      <h3> Shortened url: <a href=<%= url.long_url %>><%= url.short_url %></a> <h3>
+      <h5><%= link_to "Delete link", url_path(url), method: :delete %><h5>
+    </li>
+    <br>
+  <% end %>
+</ul>
